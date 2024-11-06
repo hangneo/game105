@@ -1387,6 +1387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   attackPos: {fileID: 1903807039}
+  attackPos2: {fileID: 1239185649}
+  attackEffectPrefab: {fileID: 6162729578398534255, guid: 98be6395e1453854fb2f823d783e1e16, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -21093,14 +21095,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239185650}
-  - component: {fileID: 1239185651}
   m_Layer: 0
-  m_Name: wrtewtrewt
+  m_Name: AttackPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1239185650
 Transform:
   m_ObjectHideFlags: 0
@@ -21110,48 +21111,12 @@ Transform:
   m_GameObject: {fileID: 1239185649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: 0, z: 0}
+  m_LocalPosition: {x: 1.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 383000901}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1239185651
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239185649}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.53164554, y: 0}
-  m_Radius: 1.0316455
 --- !u!1 &1385090132
 GameObject:
   m_ObjectHideFlags: 0
@@ -21386,7 +21351,7 @@ Transform:
   m_GameObject: {fileID: 1903807039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: -0.03, z: 0}
+  m_LocalPosition: {x: 1.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21596,6 +21561,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   attackPos: {fileID: 0}
+  attackPos2: {fileID: 0}
+  attackEffectPrefab: {fileID: 0}
 --- !u!70 &2005372471
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

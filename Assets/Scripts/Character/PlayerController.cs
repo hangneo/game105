@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Tốc độ di chuyển
+    public GameObject attackPos; //Tham chiếu đến vị trí tấn công
+    public GameObject attackPos2; //Tham chiếu đến vị trí tấn công 2
+    public GameObject attackEffectPrefab;  // Prefab AttackEffect
 
     private Rigidbody2D rb; // Tham chiếu đến Rigidbody2D
     private Vector2 movement; // Lưu trữ hướng di chuyển
     private Animator animator; // Tham chiếu đến Animator
-    public GameObject attackPos; //Tham chiếu đến vị trí tấn công
+
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("swing2");
         }
+        else if (Input.GetKeyDown(KeyCode.I))
+        {
+            Attack2();
+        }
 
 
 
@@ -82,13 +89,19 @@ public class PlayerController : MonoBehaviour
     {
         attackPos.SetActive(true);
     }
-    
+
     //Tắt trạng thái tấn công
     public void DisableAttackPos()
     {
         attackPos.SetActive(false);
     }
 
+    public void Attack2()
+    {
+        GameObject attackEffect = Instantiate(attackEffectPrefab, attackPos2.transform.position, Quaternion.identity, transform);
+        Debug.Log("Tấn công 2 ");
+
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
